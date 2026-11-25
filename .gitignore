@@ -1,0 +1,18 @@
+# Credentials: commit config.example.h instead
+config.h
+secrets.h
+
+# Build output
+build/
+*.bin
+*.elf
+*.hex
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Large media: link to it instead of committing it
+*.mp4
+*.mov
