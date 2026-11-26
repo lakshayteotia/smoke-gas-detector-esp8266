@@ -4,13 +4,13 @@
 
 An ESP8266 (NodeMCU) system that watches an MQ smoke/gas sensor and, when it trips for a sustained period, switches an exhaust fan through a relay, opens a servo-driven vent, sounds a buzzer, updates an LCD, and shows live status on a web dashboard with manual controls.
 
-**Demo:** TODO — add a link to the demo video (YouTube/LinkedIn) or embed a short GIF: `![demo](media/demo.gif)`
+**Demo:** video link to be added after the LinkedIn post.
 
 > The demo triggers the system with smoke. Gas-leak response was not demonstrated.
 
 ## What it does
 
-- Detects smoke/gas using an MQ-series sensor (digital output)
+- Detects smoke/gas using an MQ-2 sensor (digital output)
 - Waits out a sensor warm-up before enabling automation
 - Requires detection to persist (~2 s) before acting, to cut false alarms
 - On detection: fan ON (relay), vent OPEN (servo), buzzer ON, LCD alert, dashboard alert
@@ -20,7 +20,7 @@ An ESP8266 (NodeMCU) system that watches an MQ smoke/gas sensor and, when it tri
 
 ## Hardware
 
-NodeMCU ESP8266, MQ-series gas sensor (TODO: exact model), relay module, DC exhaust fan, servo motor, passive buzzer, 16x2 I2C LCD, DC-DC buck converter, 3x 18650 pack.
+NodeMCU ESP8266, MQ-2 gas/smoke sensor module, relay module, DC exhaust fan, servo motor, passive buzzer, 16x2 I2C LCD, DC-DC buck converter, 3x 18650 pack.
 
 Full parts list and pin mapping: [`docs/hardware.md`](docs/hardware.md)
 
@@ -58,7 +58,7 @@ Details and planned fixes: [`docs/known-limitations.md`](docs/known-limitations.
 
 ## Next project
 
-TODO: link to VehicleSentinel (dual-node ESP32 with ESP-NOW and MQTT over TLS) once its repo is public.
+Next project: VehicleSentinel, a dual-node ESP32 telemetry system (in progress).
 
 ## License
 

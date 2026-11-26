@@ -5,7 +5,7 @@ This is a learning project. These are the real gaps, including bugs found in cod
 | Limitation | Why it matters | Planned fix |
 |---|---|---|
 | Reads the sensor's **digital output only** | A potentiometer-set threshold, not a measurement. No concentration, no calibration curve. The dashboard "Flame Meter" is a two-state bar (100% or 4%), not a measurement | Read the analog output and calibrate against a reference |
-| **MQ sensor cross-sensitivity** | MQ sensors respond to several gases and smoke; the system cannot tell fire from a gas leak | Document the exact sensor model; consider a dedicated sensor per hazard |
+| **MQ sensor cross-sensitivity** | The MQ-2 responds to smoke, LPG, methane, hydrogen, alcohol and other combustibles; the system cannot tell fire from a gas leak | Consider a dedicated sensor per hazard |
 | **Short warm-up (~15 s)** | MQ datasheets call for a much longer preheat for stable readings; the delay mainly hides startup false triggers | Longer preheat and baseline logic |
 | **Weak AP password, unauthenticated controls** | The AP uses a short shared WPA2 password, and the control endpoints are plain unauthenticated GET requests. Anyone who joins can turn the fan or vent off or disable the alarm | Strong per-device password; authenticated, non-GET control endpoints |
 | **Dashboard is local only** | It only works within WiFi range of the device. Not remote monitoring | Join an existing network and publish to a broker |

@@ -5,7 +5,7 @@
 | Part | Role | Notes |
 |---|---|---|
 | NodeMCU ESP8266 | Main controller, WiFi AP + web server | |
-| MQ-series gas sensor | Smoke/gas detection | TODO: exact model. Digital output (DO) used; threshold set by onboard potentiometer |
+| MQ-2 gas/smoke sensor module | Smoke and combustible gas detection | Digital output (DO) used; threshold set by onboard potentiometer |
 | Relay module | Switches the exhaust fan | The sketch drives the pin HIGH for fan ON and LOW for fan OFF |
 | DC exhaust fan | Removes smoke/gas | |
 | Servo motor | Vent: 0 deg closed, 90 deg open | |
@@ -33,6 +33,3 @@ Battery pack -> buck converter -> 5 V rail feeding the ESP8266, relay, LCD, MQ s
 
 Early builds used a perfboard with a broken solder joint, which gave an unstable rail and relay malfunctions. The rail was rebuilt with breadboard power rails and direct buck-converter distribution. A single shared rail for a servo, relay, and microcontroller is a known weak point (see known limitations).
 
-## Photos and wiring diagram
-
-TODO: add a labeled photo of the build and, ideally, a wiring diagram (Fritzing or hand-drawn) to `media/` and link them here.
